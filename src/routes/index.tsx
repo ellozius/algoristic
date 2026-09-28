@@ -7,11 +7,9 @@ import { Logo } from "@/components/logo";
 export const Route = createFileRoute("/")({ component: Home });
 
 const EMAIL = "hello@algoristic.my.id";
-const WHATSAPP_E164 = "6282387083188";
+const WHATSAPP_PHONE = "6282387083188";
 const WHATSAPP_TEXT = "Halo Algoristic, saya ingin berbicara lebih lanjut.";
-const WHATSAPP_HREF = WHATSAPP_E164
-  ? `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_TEXT)}`
-  : `https://wa.me/?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
+const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
 const PILLARS = [
   {
@@ -39,7 +37,7 @@ function Home() {
           <a href="#atas" className="text-fg hover:text-fg/90 transition-colors duration-150">
             <Logo />
           </a>
-          <nav className="flex items-center gap-6 text-sm text-muted">
+          <nav className="flex items-center gap-3 sm:gap-6 text-sm text-muted">
             <a href="#arah" className="hover:text-fg transition-colors duration-150">
               Arah
             </a>
